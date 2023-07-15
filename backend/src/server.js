@@ -1,3 +1,6 @@
 const app = require('./app');
 
-app.listen(3001, () => console.log("deu certo"));
+require('dotenv').config();
+const port = process.env.PORT;
+
+app.listen(port, () => console.log(`ta rodando ${port}`));
